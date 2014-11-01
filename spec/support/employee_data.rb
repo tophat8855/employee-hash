@@ -1,4 +1,4 @@
-def medical_data
+def employee_data
   {
     people: {
       1 => {

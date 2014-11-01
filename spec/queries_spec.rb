@@ -8,28 +8,28 @@ describe 'queries on employee data' do
       expect(first_names(data)).to be == ['Martha', 'John', 'Kane']
     end
 
-    xit "can report their last names" do
+    it "can report their last names" do
       expect(last_names(data)).to be == ['Berner', 'Foley', 'Baccigalupi']
     end
 
-    xit "can report their full names" do
+    it "can report their full names" do
       expect(full_names(data)).to be == ['Martha Berner', 'John Foley', 'Kane Baccigalupi']
     end
 
-    xit "can report their names last name first with a comma" do
+    it "can report their names last name first with a comma" do
       expect(last_name_first_names(data)).to be == [
         "Berner, Martha", 'Foley, John', 'Baccigalupi, Kane'
       ]
     end
   end
 
-  xdescribe 'company information' do
+  describe 'company information' do
     it "gets a list of company names" do
       expect(company_names(data)).to be == ["Galvanize, Inc.", 'Pivotal Labs']
     end
 
     it "returns a list of people per company name" do
-      expect(employees(data, "Galvinize, Inc")).to be == [
+      expect(employees(data, "Galvanize, Inc.")).to be == [
         {
           company_id: 42,
           first_name: 'Martha',
